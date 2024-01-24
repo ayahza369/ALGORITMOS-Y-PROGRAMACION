@@ -44,6 +44,13 @@ elif at_op==3:
     Ps_jugador-=40
 print(selecion)
 
+print(Ps_jugador)
+print(Ps_oponente)
+print(defensa_jugador)
+print(defensa_oponente)
+
+
+
 
 if Ps_oponente<=0 and Ps_jugador<=0:
     print("empate")
