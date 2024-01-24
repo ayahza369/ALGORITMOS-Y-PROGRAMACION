@@ -1,0 +1,25 @@
+
+print("Este es un codigo para calcular la resolviente cuadratica")
+print("La forma quadratica es")
+a=input("introduzca el valor de a")
+b=input("introduzca el valor de b")
+c=input("introduzca el valor de c")
+
+dis=(b**2)-(4*a*c)
+
+if dis>= 0:
+    pass
+else:
+    print("error su discriminante es menor que zero")
+    quit()
+
+x1=( (b*-1) + ((b)**2-(4*a*c))**(1/2))/(2*a)
+x2=( (b*-1) - ((b)**2-(4*a*c))**(1/2))/(2*a)
+print('SUS VALORES DE X SON')
+print(x1)
+print(x2)
+
+
+
+
+        

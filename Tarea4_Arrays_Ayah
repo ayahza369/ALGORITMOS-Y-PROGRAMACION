@@ -1,0 +1,66 @@
+import random
+
+Ps_jugador=100
+Ps_oponente=100
+defensa_oponente=100
+defensa_jugador=100
+
+ataques_jug=("malicioso-placaje-ascuas")
+at_jug=ataques_jug.split('-')
+print(at_jug)
+es=input("Escoge uno de los ataques:")
+
+while Ps_jugador>0 and Ps_oponente>0:
+    if es==at_jug[0]:
+        defensa_oponente-= 10
+        if defensa_oponente<=0:
+            defensa_oponente = 1
+        else:
+            pass
+    elif es==at_jug[1]:
+        Ps_oponente-=35/(defensa_oponente/100)
+    elif es==at_jug[2]:
+        Ps_oponente-=20
+    else:
+        print('No escojiste uno de los ataques de la lista. intente otra ves')
+        continue
+        
+    #Turno de oponente 
+ataques_op=("latigo-placaje-pistola de agua")
+at_op=ataques_op.split('-')
+at_op2=random.randrange(1,3+1)
+
+selecion=()
+if at_op2==1:
+    selecion=at_op[0]
+    defensa_jugador-=10
+    if defensa_jugador<=0:
+        defensa_jugador=1
+elif at_op==2:
+    selecion=at_op[1]
+    Ps_jugador-=35*(100/defensa_jugador)
+elif at_op==3:
+    selecion=at_op[3]
+    Ps_jugador-=40
+print(selecion)
+
+
+if Ps_oponente<=0 and Ps_jugador<=0:
+    print("empate")
+elif Ps_oponente:
+    print('Felicidades, has ganado!')
+else: 
+    print("Perdiste")
+
+
+
+
+
+
+
+
+
+
+
+
+

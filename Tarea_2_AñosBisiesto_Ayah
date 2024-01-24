@@ -1,0 +1,45 @@
+print("Bienvenidos a este calculadora de anos bisiestos!")
+num=(input("Escoje un ano entre 1900 y 2199"))
+
+if num not in range(1900,2199):
+    print("su opcion no esta entre el rango")
+else: print("Ahora, calculamos!")
+
+
+
+
+sum=0
+while num>1900:
+    x=num%4 
+    z=num%400
+    y=num%100
+    if x==0 or (y==0 and z!=0):
+       sum=sum+1
+    else:
+        pass
+    num= num-1
+
+print ("El numero de anos es:" + str(sum))
+
+
+
+
+
+    
+   
+
+
+
+    
+  
+
+    
+    
+   
+
+
+
+
+
+
+
